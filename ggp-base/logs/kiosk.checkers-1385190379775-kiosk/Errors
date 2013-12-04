@@ -1,0 +1,25 @@
+LOG 1385190995898 [L9]: <ERR> (in GamePlayer) There are no legal moves defined for black in [( true ( cell b 3 wp ) ), ( true ( cell c 2 wp ) ), ( true ( cell f 1 b ) ), ( true ( cell b 1 b ) ), ( true ( cell a 6 wp ) ), ( true ( cell b 5 wk ) ), ( true ( cell c 4 b ) ), ( true ( cell e 6 b ) ), ( true ( cell f 7 b ) ), ( true ( cell c 6 b ) ), ( true ( cell d 1 b ) ), ( true ( cell d 3 b ) ), ( true ( cell f 3 wp ) ), ( true ( cell h 7 b ) ), ( true ( cell c 8 b ) ), ( true ( cell h 5 b ) ), ( true ( cell a 4 wp ) ), ( true ( cell b 7 b ) ), ( true ( piece_count black 1 ) ), ( true ( cell d 5 b ) ), ( true ( cell h 1 b ) ), ( true ( cell g 4 bp ) ), ( true ( cell d 7 b ) ), ( true ( cell g 8 b ) ), ( true ( cell g 6 b ) ), ( true ( step 44 ) ), ( true ( cell e 2 wp ) ), ( true ( cell e 4 b ) ), ( true ( cell a 8 b ) ), ( true ( cell f 5 b ) ), ( true ( piece_count red 10 ) ), ( true ( cell g 2 b ) ), ( true ( cell e 8 wk ) ), ( true ( cell a 2 wp ) ), ( true ( control black ) ), ( true ( cell h 3 wp ) )]
+	at org.ggp.base.util.statemachine.implementation.prover.ProverStateMachine.getLegalMoves(ProverStateMachine.java:90)
+	at org.ggp.base.util.statemachine.cache.CachedStateMachine.getLegalMoves(CachedStateMachine.java:76)
+	at org.ggp.base.util.statemachine.StateMachine.getLegalJointMoves(StateMachine.java:162)
+	at org.ggp.base.util.statemachine.StateMachine.getNextStates(StateMachine.java:204)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.monteCarloFromState(RamiGamer.java:391)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.monteCarloForMove(RamiGamer.java:279)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.stateMachineSelectMove(RamiGamer.java:159)
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:210)
+	at org.ggp.base.player.request.grammar.PlayRequest.process(PlayRequest.java:49)
+	at org.ggp.base.player.GamePlayer.run(GamePlayer.java:90)
+LOG 1385190995909 [L9]: <ERR> (in GamePlayer) An unhandled exception ocurred during move selection: org.ggp.base.player.gamer.exception.MoveSelectionException: There are no legal moves defined for black in [( true ( cell b 3 wp ) ), ( true ( cell c 2 wp ) ), ( true ( cell f 1 b ) ), ( true ( cell b 1 b ) ), ( true ( cell a 6 wp ) ), ( true ( cell b 5 wk ) ), ( true ( cell c 4 b ) ), ( true ( cell e 6 b ) ), ( true ( cell f 7 b ) ), ( true ( cell c 6 b ) ), ( true ( cell d 1 b ) ), ( true ( cell d 3 b ) ), ( true ( cell f 3 wp ) ), ( true ( cell h 7 b ) ), ( true ( cell c 8 b ) ), ( true ( cell h 5 b ) ), ( true ( cell a 4 wp ) ), ( true ( cell b 7 b ) ), ( true ( piece_count black 1 ) ), ( true ( cell d 5 b ) ), ( true ( cell h 1 b ) ), ( true ( cell g 4 bp ) ), ( true ( cell d 7 b ) ), ( true ( cell g 8 b ) ), ( true ( cell g 6 b ) ), ( true ( step 44 ) ), ( true ( cell e 2 wp ) ), ( true ( cell e 4 b ) ), ( true ( cell a 8 b ) ), ( true ( cell f 5 b ) ), ( true ( piece_count red 10 ) ), ( true ( cell g 2 b ) ), ( true ( cell e 8 wk ) ), ( true ( cell a 2 wp ) ), ( true ( control black ) ), ( true ( cell h 3 wp ) )]
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:215)
+	at org.ggp.base.player.request.grammar.PlayRequest.process(PlayRequest.java:49)
+	at org.ggp.base.player.GamePlayer.run(GamePlayer.java:90)
+Caused by: There are no legal moves defined for black in [( true ( cell b 3 wp ) ), ( true ( cell c 2 wp ) ), ( true ( cell f 1 b ) ), ( true ( cell b 1 b ) ), ( true ( cell a 6 wp ) ), ( true ( cell b 5 wk ) ), ( true ( cell c 4 b ) ), ( true ( cell e 6 b ) ), ( true ( cell f 7 b ) ), ( true ( cell c 6 b ) ), ( true ( cell d 1 b ) ), ( true ( cell d 3 b ) ), ( true ( cell f 3 wp ) ), ( true ( cell h 7 b ) ), ( true ( cell c 8 b ) ), ( true ( cell h 5 b ) ), ( true ( cell a 4 wp ) ), ( true ( cell b 7 b ) ), ( true ( piece_count black 1 ) ), ( true ( cell d 5 b ) ), ( true ( cell h 1 b ) ), ( true ( cell g 4 bp ) ), ( true ( cell d 7 b ) ), ( true ( cell g 8 b ) ), ( true ( cell g 6 b ) ), ( true ( step 44 ) ), ( true ( cell e 2 wp ) ), ( true ( cell e 4 b ) ), ( true ( cell a 8 b ) ), ( true ( cell f 5 b ) ), ( true ( piece_count red 10 ) ), ( true ( cell g 2 b ) ), ( true ( cell e 8 wk ) ), ( true ( cell a 2 wp ) ), ( true ( control black ) ), ( true ( cell h 3 wp ) )]
+	at org.ggp.base.util.statemachine.implementation.prover.ProverStateMachine.getLegalMoves(ProverStateMachine.java:90)
+	at org.ggp.base.util.statemachine.cache.CachedStateMachine.getLegalMoves(CachedStateMachine.java:76)
+	at org.ggp.base.util.statemachine.StateMachine.getLegalJointMoves(StateMachine.java:162)
+	at org.ggp.base.util.statemachine.StateMachine.getNextStates(StateMachine.java:204)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.monteCarloFromState(RamiGamer.java:391)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.monteCarloForMove(RamiGamer.java:279)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.stateMachineSelectMove(RamiGamer.java:159)
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:210)
+	... 2 more

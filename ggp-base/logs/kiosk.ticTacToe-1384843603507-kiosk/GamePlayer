@@ -1,0 +1,40 @@
+LOG 1384843603961 [L0]: [Received at 1384843603961] ( START kiosk.ticTacToe-1384843603507 oplayer (( role xplayer ) ( role oplayer ) ( init ( cell 1 1 b ) ) ( init ( cell 1 2 b ) ) ( init ( cell 1 3 b ) ) ( init ( cell 2 1 b ) ) ( init ( cell 2 2 b ) ) ( init ( cell 2 3 b ) ) ( init ( cell 3 1 b ) ) ( init ( cell 3 2 b ) ) ( init ( cell 3 3 b ) ) ( init ( control xplayer ) ) ( <= ( next ( cell ?m ?n x ) ) ( does xplayer ( mark ?m ?n ) ) ( true ( cell ?m ?n b ) ) ) ( <= ( next ( cell ?m ?n o ) ) ( does oplayer ( mark ?m ?n ) ) ( true ( cell ?m ?n b ) ) ) ( <= ( next ( cell ?m ?n ?w ) ) ( true ( cell ?m ?n ?w ) ) ( distinct ?w b ) ) ( <= ( next ( cell ?m ?n b ) ) ( does ?w ( mark ?j ?k ) ) ( true ( cell ?m ?n b ) ) ( or ( distinct ?m ?j ) ( distinct ?n ?k ) ) ) ( <= ( next ( control xplayer ) ) ( true ( control oplayer ) ) ) ( <= ( next ( control oplayer ) ) ( true ( control xplayer ) ) ) ( <= ( row ?m ?x ) ( true ( cell ?m 1 ?x ) ) ( true ( cell ?m 2 ?x ) ) ( true ( cell ?m 3 ?x ) ) ) ( <= ( column ?n ?x ) ( true ( cell 1 ?n ?x ) ) ( true ( cell 2 ?n ?x ) ) ( true ( cell 3 ?n ?x ) ) ) ( <= ( diagonal ?x ) ( true ( cell 1 1 ?x ) ) ( true ( cell 2 2 ?x ) ) ( true ( cell 3 3 ?x ) ) ) ( <= ( diagonal ?x ) ( true ( cell 1 3 ?x ) ) ( true ( cell 2 2 ?x ) ) ( true ( cell 3 1 ?x ) ) ) ( <= ( line ?x ) ( row ?m ?x ) ) ( <= ( line ?x ) ( column ?m ?x ) ) ( <= ( line ?x ) ( diagonal ?x ) ) ( <= open ( true ( cell ?m ?n b ) ) ) ( <= ( legal ?w ( mark ?x ?y ) ) ( true ( cell ?x ?y b ) ) ( true ( control ?w ) ) ) ( <= ( legal xplayer noop ) ( true ( control oplayer ) ) ) ( <= ( legal oplayer noop ) ( true ( control xplayer ) ) ) ( <= ( goal xplayer 100 ) ( line x ) ) ( <= ( goal xplayer 50 ) ( not ( line x ) ) ( not ( line o ) ) ( not open ) ) ( <= ( goal xplayer 0 ) ( line o ) ) ( <= ( goal oplayer 100 ) ( line o ) ) ( <= ( goal oplayer 50 ) ( not ( line x ) ) ( not ( line o ) ) ( not open ) ) ( <= ( goal oplayer 0 ) ( line x ) ) ( <= terminal ( line x ) ) ( <= terminal ( line o ) ) ( <= terminal ( not open ) ) ) 30 10)
+LOG 1384843603975 [L0]: [Received at 1384843603975] ( START kiosk.ticTacToe-1384843603507 xplayer (( role xplayer ) ( role oplayer ) ( init ( cell 1 1 b ) ) ( init ( cell 1 2 b ) ) ( init ( cell 1 3 b ) ) ( init ( cell 2 1 b ) ) ( init ( cell 2 2 b ) ) ( init ( cell 2 3 b ) ) ( init ( cell 3 1 b ) ) ( init ( cell 3 2 b ) ) ( init ( cell 3 3 b ) ) ( init ( control xplayer ) ) ( <= ( next ( cell ?m ?n x ) ) ( does xplayer ( mark ?m ?n ) ) ( true ( cell ?m ?n b ) ) ) ( <= ( next ( cell ?m ?n o ) ) ( does oplayer ( mark ?m ?n ) ) ( true ( cell ?m ?n b ) ) ) ( <= ( next ( cell ?m ?n ?w ) ) ( true ( cell ?m ?n ?w ) ) ( distinct ?w b ) ) ( <= ( next ( cell ?m ?n b ) ) ( does ?w ( mark ?j ?k ) ) ( true ( cell ?m ?n b ) ) ( or ( distinct ?m ?j ) ( distinct ?n ?k ) ) ) ( <= ( next ( control xplayer ) ) ( true ( control oplayer ) ) ) ( <= ( next ( control oplayer ) ) ( true ( control xplayer ) ) ) ( <= ( row ?m ?x ) ( true ( cell ?m 1 ?x ) ) ( true ( cell ?m 2 ?x ) ) ( true ( cell ?m 3 ?x ) ) ) ( <= ( column ?n ?x ) ( true ( cell 1 ?n ?x ) ) ( true ( cell 2 ?n ?x ) ) ( true ( cell 3 ?n ?x ) ) ) ( <= ( diagonal ?x ) ( true ( cell 1 1 ?x ) ) ( true ( cell 2 2 ?x ) ) ( true ( cell 3 3 ?x ) ) ) ( <= ( diagonal ?x ) ( true ( cell 1 3 ?x ) ) ( true ( cell 2 2 ?x ) ) ( true ( cell 3 1 ?x ) ) ) ( <= ( line ?x ) ( row ?m ?x ) ) ( <= ( line ?x ) ( column ?m ?x ) ) ( <= ( line ?x ) ( diagonal ?x ) ) ( <= open ( true ( cell ?m ?n b ) ) ) ( <= ( legal ?w ( mark ?x ?y ) ) ( true ( cell ?x ?y b ) ) ( true ( control ?w ) ) ) ( <= ( legal xplayer noop ) ( true ( control oplayer ) ) ) ( <= ( legal oplayer noop ) ( true ( control xplayer ) ) ) ( <= ( goal xplayer 100 ) ( line x ) ) ( <= ( goal xplayer 50 ) ( not ( line x ) ) ( not ( line o ) ) ( not open ) ) ( <= ( goal xplayer 0 ) ( line o ) ) ( <= ( goal oplayer 100 ) ( line o ) ) ( <= ( goal oplayer 50 ) ( not ( line x ) ) ( not ( line o ) ) ( not open ) ) ( <= ( goal oplayer 0 ) ( line x ) ) ( <= terminal ( line x ) ) ( <= terminal ( line o ) ) ( <= terminal ( not open ) ) ) 30 10)
+LOG 1384843604207 [L0]: [Sent at 1384843604207] ready
+LOG 1384843605256 [L0]: [Sent at 1384843605256] ready
+LOG 1384843605281 [L0]: [Received at 1384843605281] ( PLAY kiosk.ticTacToe-1384843603507 NIL )
+LOG 1384843605282 [L0]: [Received at 1384843605282] ( PLAY kiosk.ticTacToe-1384843603507 NIL )
+LOG 1384843605680 [L0]: [Sent at 1384843605680] noop
+LOG 1384843608270 [L0]: [Sent at 1384843608270] ( mark 1 3 )
+LOG 1384843608329 [L0]: [Received at 1384843608329] ( PLAY kiosk.ticTacToe-1384843603507 (( mark 1 3 ) noop ) )
+LOG 1384843608331 [L0]: [Received at 1384843608331] ( PLAY kiosk.ticTacToe-1384843603507 (( mark 1 3 ) noop ) )
+LOG 1384843608377 [L0]: [Sent at 1384843608377] noop
+LOG 1384843609463 [L0]: [Sent at 1384843609463] ( mark 2 2 )
+LOG 1384843609472 [L0]: [Received at 1384843609472] ( PLAY kiosk.ticTacToe-1384843603507 (noop ( mark 2 2 ) ) )
+LOG 1384843609487 [L0]: [Received at 1384843609487] ( PLAY kiosk.ticTacToe-1384843603507 (noop ( mark 2 2 ) ) )
+LOG 1384843609566 [L0]: [Sent at 1384843609566] noop
+LOG 1384843617431 [L0]: [Sent at 1384843617431] ( mark 1 2 )
+LOG 1384843617449 [L0]: [Received at 1384843617449] ( PLAY kiosk.ticTacToe-1384843603507 (( mark 1 2 ) noop ) )
+LOG 1384843617458 [L0]: [Received at 1384843617458] ( PLAY kiosk.ticTacToe-1384843603507 (( mark 1 2 ) noop ) )
+LOG 1384843617459 [L0]: [Sent at 1384843617459] noop
+LOG 1384843617783 [L0]: [Sent at 1384843617783] ( mark 1 1 )
+LOG 1384843617787 [L0]: [Received at 1384843617787] ( PLAY kiosk.ticTacToe-1384843603507 (noop ( mark 1 1 ) ) )
+LOG 1384843617828 [L0]: [Received at 1384843617828] ( PLAY kiosk.ticTacToe-1384843603507 (noop ( mark 1 1 ) ) )
+LOG 1384843617892 [L0]: [Sent at 1384843617892] noop
+LOG 1384843623035 [L0]: [Sent at 1384843623035] ( mark 3 3 )
+LOG 1384843623047 [L0]: [Received at 1384843623047] ( PLAY kiosk.ticTacToe-1384843603507 (( mark 3 3 ) noop ) )
+LOG 1384843623056 [L0]: [Sent at 1384843623056] noop
+LOG 1384843623058 [L0]: [Received at 1384843623058] ( PLAY kiosk.ticTacToe-1384843603507 (( mark 3 3 ) noop ) )
+LOG 1384843623143 [L0]: [Sent at 1384843623143] ( mark 2 3 )
+LOG 1384843623146 [L0]: [Received at 1384843623146] ( PLAY kiosk.ticTacToe-1384843603507 (noop ( mark 2 3 ) ) )
+LOG 1384843623164 [L0]: [Received at 1384843623164] ( PLAY kiosk.ticTacToe-1384843603507 (noop ( mark 2 3 ) ) )
+LOG 1384843623197 [L0]: [Sent at 1384843623197] noop
+LOG 1384843627476 [L0]: [Sent at 1384843627476] ( mark 3 1 )
+LOG 1384843627479 [L0]: [Received at 1384843627479] ( PLAY kiosk.ticTacToe-1384843603507 (( mark 3 1 ) noop ) )
+LOG 1384843627488 [L0]: [Sent at 1384843627488] noop
+LOG 1384843627489 [L0]: [Received at 1384843627489] ( PLAY kiosk.ticTacToe-1384843603507 (( mark 3 1 ) noop ) )
+LOG 1384843627507 [L0]: [Sent at 1384843627507] ( mark 2 1 )
+LOG 1384843627533 [L0]: [Received at 1384843627532] ( STOP kiosk.ticTacToe-1384843603507 (noop ( mark 2 1 ) ) )
+LOG 1384843627540 [L0]: [Sent at 1384843627540] done
+LOG 1384843627551 [L0]: [Received at 1384843627551] ( STOP kiosk.ticTacToe-1384843603507 (noop ( mark 2 1 ) ) )
+LOG 1384843627556 [L0]: [Sent at 1384843627556] done

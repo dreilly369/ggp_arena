@@ -1,0 +1,21 @@
+LOG 1385174545998 [L9]: <ERR> (in GamePlayer) java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:819)
+	at java.util.ArrayList$Itr.next(ArrayList.java:791)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.monteCarloFromState(RamiGamer.java:379)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.monteCarloForMove(RamiGamer.java:280)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.stateMachineSelectMove(RamiGamer.java:159)
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:210)
+	at org.ggp.base.player.request.grammar.PlayRequest.process(PlayRequest.java:49)
+	at org.ggp.base.player.GamePlayer.run(GamePlayer.java:90)
+LOG 1385174546009 [L9]: <ERR> (in GamePlayer) An unhandled exception ocurred during move selection: org.ggp.base.player.gamer.exception.MoveSelectionException: java.util.ConcurrentModificationException
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:215)
+	at org.ggp.base.player.request.grammar.PlayRequest.process(PlayRequest.java:49)
+	at org.ggp.base.player.GamePlayer.run(GamePlayer.java:90)
+Caused by: java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:819)
+	at java.util.ArrayList$Itr.next(ArrayList.java:791)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.monteCarloFromState(RamiGamer.java:379)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.monteCarloForMove(RamiGamer.java:280)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.stateMachineSelectMove(RamiGamer.java:159)
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:210)
+	... 2 more

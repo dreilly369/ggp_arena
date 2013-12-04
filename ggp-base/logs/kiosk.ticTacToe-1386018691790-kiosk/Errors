@@ -1,0 +1,22 @@
+LOG 1386018706307 [L9]: <ERR> (in GamePlayer) java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:371)
+	at java.util.ArrayList.get(ArrayList.java:384)
+	at org.ggp.base.player.gamer.statemachine.sample.GameGraphBFS.buildGraph(GameGraphBFS.java:58)
+	at org.ggp.base.player.gamer.statemachine.sample.GameGraphBFS.<init>(GameGraphBFS.java:38)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.stateMachineMetaGame(RamiGamer.java:90)
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.metaGame(StateMachineGamer.java:175)
+	at org.ggp.base.player.request.grammar.StartRequest.process(StartRequest.java:59)
+	at org.ggp.base.player.GamePlayer.run(GamePlayer.java:90)
+LOG 1386018706310 [L9]: <ERR> (in GamePlayer) An unhandled exception occurred during metagaming: org.ggp.base.player.gamer.exception.MetaGamingException: java.lang.ArrayIndexOutOfBoundsException: -1
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.metaGame(StateMachineGamer.java:180)
+	at org.ggp.base.player.request.grammar.StartRequest.process(StartRequest.java:59)
+	at org.ggp.base.player.GamePlayer.run(GamePlayer.java:90)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:371)
+	at java.util.ArrayList.get(ArrayList.java:384)
+	at org.ggp.base.player.gamer.statemachine.sample.GameGraphBFS.buildGraph(GameGraphBFS.java:58)
+	at org.ggp.base.player.gamer.statemachine.sample.GameGraphBFS.<init>(GameGraphBFS.java:38)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.stateMachineMetaGame(RamiGamer.java:90)
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.metaGame(StateMachineGamer.java:175)
+	... 2 more
+LOG 1386018706362 [L9]: <ERR> (in GamePlayer) Got play message not intended for current game: ignoring.

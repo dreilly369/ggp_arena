@@ -1,0 +1,103 @@
+LOG 1385185422248 [L0]: [Received at 1385185422248] ( START kiosk.ticTacToe-1385185421734 oplayer (( role xplayer ) ( role oplayer ) ( init ( cell 1 1 b ) ) ( init ( cell 1 2 b ) ) ( init ( cell 1 3 b ) ) ( init ( cell 2 1 b ) ) ( init ( cell 2 2 b ) ) ( init ( cell 2 3 b ) ) ( init ( cell 3 1 b ) ) ( init ( cell 3 2 b ) ) ( init ( cell 3 3 b ) ) ( init ( control xplayer ) ) ( <= ( next ( cell ?m ?n x ) ) ( does xplayer ( mark ?m ?n ) ) ( true ( cell ?m ?n b ) ) ) ( <= ( next ( cell ?m ?n o ) ) ( does oplayer ( mark ?m ?n ) ) ( true ( cell ?m ?n b ) ) ) ( <= ( next ( cell ?m ?n ?w ) ) ( true ( cell ?m ?n ?w ) ) ( distinct ?w b ) ) ( <= ( next ( cell ?m ?n b ) ) ( does ?w ( mark ?j ?k ) ) ( true ( cell ?m ?n b ) ) ( or ( distinct ?m ?j ) ( distinct ?n ?k ) ) ) ( <= ( next ( control xplayer ) ) ( true ( control oplayer ) ) ) ( <= ( next ( control oplayer ) ) ( true ( control xplayer ) ) ) ( <= ( row ?m ?x ) ( true ( cell ?m 1 ?x ) ) ( true ( cell ?m 2 ?x ) ) ( true ( cell ?m 3 ?x ) ) ) ( <= ( column ?n ?x ) ( true ( cell 1 ?n ?x ) ) ( true ( cell 2 ?n ?x ) ) ( true ( cell 3 ?n ?x ) ) ) ( <= ( diagonal ?x ) ( true ( cell 1 1 ?x ) ) ( true ( cell 2 2 ?x ) ) ( true ( cell 3 3 ?x ) ) ) ( <= ( diagonal ?x ) ( true ( cell 1 3 ?x ) ) ( true ( cell 2 2 ?x ) ) ( true ( cell 3 1 ?x ) ) ) ( <= ( line ?x ) ( row ?m ?x ) ) ( <= ( line ?x ) ( column ?m ?x ) ) ( <= ( line ?x ) ( diagonal ?x ) ) ( <= open ( true ( cell ?m ?n b ) ) ) ( <= ( legal ?w ( mark ?x ?y ) ) ( true ( cell ?x ?y b ) ) ( true ( control ?w ) ) ) ( <= ( legal xplayer noop ) ( true ( control oplayer ) ) ) ( <= ( legal oplayer noop ) ( true ( control xplayer ) ) ) ( <= ( goal xplayer 100 ) ( line x ) ) ( <= ( goal xplayer 50 ) ( not ( line x ) ) ( not ( line o ) ) ( not open ) ) ( <= ( goal xplayer 0 ) ( line o ) ) ( <= ( goal oplayer 100 ) ( line o ) ) ( <= ( goal oplayer 50 ) ( not ( line x ) ) ( not ( line o ) ) ( not open ) ) ( <= ( goal oplayer 0 ) ( line x ) ) ( <= terminal ( line x ) ) ( <= terminal ( line o ) ) ( <= terminal ( not open ) ) ) 30 10)
+LOG 1385185422262 [L0]: [Received at 1385185422262] ( START kiosk.ticTacToe-1385185421734 xplayer (( role xplayer ) ( role oplayer ) ( init ( cell 1 1 b ) ) ( init ( cell 1 2 b ) ) ( init ( cell 1 3 b ) ) ( init ( cell 2 1 b ) ) ( init ( cell 2 2 b ) ) ( init ( cell 2 3 b ) ) ( init ( cell 3 1 b ) ) ( init ( cell 3 2 b ) ) ( init ( cell 3 3 b ) ) ( init ( control xplayer ) ) ( <= ( next ( cell ?m ?n x ) ) ( does xplayer ( mark ?m ?n ) ) ( true ( cell ?m ?n b ) ) ) ( <= ( next ( cell ?m ?n o ) ) ( does oplayer ( mark ?m ?n ) ) ( true ( cell ?m ?n b ) ) ) ( <= ( next ( cell ?m ?n ?w ) ) ( true ( cell ?m ?n ?w ) ) ( distinct ?w b ) ) ( <= ( next ( cell ?m ?n b ) ) ( does ?w ( mark ?j ?k ) ) ( true ( cell ?m ?n b ) ) ( or ( distinct ?m ?j ) ( distinct ?n ?k ) ) ) ( <= ( next ( control xplayer ) ) ( true ( control oplayer ) ) ) ( <= ( next ( control oplayer ) ) ( true ( control xplayer ) ) ) ( <= ( row ?m ?x ) ( true ( cell ?m 1 ?x ) ) ( true ( cell ?m 2 ?x ) ) ( true ( cell ?m 3 ?x ) ) ) ( <= ( column ?n ?x ) ( true ( cell 1 ?n ?x ) ) ( true ( cell 2 ?n ?x ) ) ( true ( cell 3 ?n ?x ) ) ) ( <= ( diagonal ?x ) ( true ( cell 1 1 ?x ) ) ( true ( cell 2 2 ?x ) ) ( true ( cell 3 3 ?x ) ) ) ( <= ( diagonal ?x ) ( true ( cell 1 3 ?x ) ) ( true ( cell 2 2 ?x ) ) ( true ( cell 3 1 ?x ) ) ) ( <= ( line ?x ) ( row ?m ?x ) ) ( <= ( line ?x ) ( column ?m ?x ) ) ( <= ( line ?x ) ( diagonal ?x ) ) ( <= open ( true ( cell ?m ?n b ) ) ) ( <= ( legal ?w ( mark ?x ?y ) ) ( true ( cell ?x ?y b ) ) ( true ( control ?w ) ) ) ( <= ( legal xplayer noop ) ( true ( control oplayer ) ) ) ( <= ( legal oplayer noop ) ( true ( control xplayer ) ) ) ( <= ( goal xplayer 100 ) ( line x ) ) ( <= ( goal xplayer 50 ) ( not ( line x ) ) ( not ( line o ) ) ( not open ) ) ( <= ( goal xplayer 0 ) ( line o ) ) ( <= ( goal oplayer 100 ) ( line o ) ) ( <= ( goal oplayer 50 ) ( not ( line x ) ) ( not ( line o ) ) ( not open ) ) ( <= ( goal oplayer 0 ) ( line x ) ) ( <= terminal ( line x ) ) ( <= terminal ( line o ) ) ( <= terminal ( not open ) ) ) 30 10)
+LOG 1385185422490 [L0]: [Sent at 1385185422490] ready
+LOG 1385185451828 [L0]: [Sent at 1385185451828] ready
+LOG 1385185451927 [L0]: [Received at 1385185451927] ( PLAY kiosk.ticTacToe-1385185421734 NIL )
+LOG 1385185451945 [L0]: [Received at 1385185451945] ( PLAY kiosk.ticTacToe-1385185421734 NIL )
+LOG 1385185455079 [L0]: [Sent at 1385185455079] ( mark 2 2 )
+LOG 1385185461278 [L0]: [Sent at 1385185461278] noop
+LOG 1385185461288 [L0]: [Received at 1385185461288] ( PLAY kiosk.ticTacToe-1385185421734 (( mark 2 2 ) noop ) )
+LOG 1385185461300 [L0]: [Sent at 1385185461300] noop
+LOG 1385185461305 [L0]: [Received at 1385185461305] ( PLAY kiosk.ticTacToe-1385185421734 (( mark 2 2 ) noop ) )
+LOG 1385185470620 [L0]: [Sent at 1385185470620] ( mark 3 3 )
+LOG 1385185470627 [L0]: [Received at 1385185470627] ( PLAY kiosk.ticTacToe-1385185421734 (noop ( mark 3 3 ) ) )
+LOG 1385185470644 [L0]: [Received at 1385185470644] ( PLAY kiosk.ticTacToe-1385185421734 (noop ( mark 3 3 ) ) )
+LOG 1385185479964 [L0]: [Sent at 1385185479964] noop
+LOG 1385185482708 [L0]: [Sent at 1385185482708] ( mark 1 3 )
+LOG 1385185482738 [L0]: [Received at 1385185482738] ( PLAY kiosk.ticTacToe-1385185421734 (( mark 1 3 ) noop ) )
+LOG 1385185482742 [L0]: [Sent at 1385185482742] noop
+LOG 1385185482743 [L0]: [Received at 1385185482743] ( PLAY kiosk.ticTacToe-1385185421734 (( mark 1 3 ) noop ) )
+LOG 1385185492069 [L0]: [Sent at 1385185492069] ( mark 3 1 )
+LOG 1385185492077 [L0]: [Received at 1385185492077] ( PLAY kiosk.ticTacToe-1385185421734 (noop ( mark 3 1 ) ) )
+LOG 1385185492078 [L0]: [Received at 1385185492078] ( PLAY kiosk.ticTacToe-1385185421734 (noop ( mark 3 1 ) ) )
+LOG 1385185492126 [L9]: <ERR> java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:604)
+	at java.util.ArrayList.get(ArrayList.java:382)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.monteCarloFromState(RamiGamer.java:408)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.monteCarloForMove(RamiGamer.java:279)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.stateMachineSelectMove(RamiGamer.java:159)
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:210)
+	at org.ggp.base.player.request.grammar.PlayRequest.process(PlayRequest.java:49)
+	at org.ggp.base.player.GamePlayer.run(GamePlayer.java:90)
+LOG 1385185492133 [L9]: <ERR> An unhandled exception ocurred during move selection: org.ggp.base.player.gamer.exception.MoveSelectionException: java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:215)
+	at org.ggp.base.player.request.grammar.PlayRequest.process(PlayRequest.java:49)
+	at org.ggp.base.player.GamePlayer.run(GamePlayer.java:90)
+Caused by: java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:604)
+	at java.util.ArrayList.get(ArrayList.java:382)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.monteCarloFromState(RamiGamer.java:408)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.monteCarloForMove(RamiGamer.java:279)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.stateMachineSelectMove(RamiGamer.java:159)
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:210)
+	... 2 more
+LOG 1385185492137 [L0]: [Sent at 1385185492137] nil
+LOG 1385185516241 [L0]: [Sent at 1385185516241] ( mark 1 1 )
+LOG 1385185516254 [L0]: [Received at 1385185516254] ( PLAY kiosk.ticTacToe-1385185421734 (( mark 1 1 ) noop ) )
+LOG 1385185516258 [L0]: [Sent at 1385185516258] noop
+LOG 1385185516268 [L0]: [Received at 1385185516268] ( PLAY kiosk.ticTacToe-1385185421734 (( mark 1 1 ) noop ) )
+LOG 1385185525595 [L0]: [Sent at 1385185525595] ( mark 1 2 )
+LOG 1385185525603 [L0]: [Received at 1385185525603] ( PLAY kiosk.ticTacToe-1385185421734 (noop ( mark 1 2 ) ) )
+LOG 1385185525603 [L0]: [Received at 1385185525603] ( PLAY kiosk.ticTacToe-1385185421734 (noop ( mark 1 2 ) ) )
+LOG 1385185525633 [L9]: <ERR> java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:604)
+	at java.util.ArrayList.get(ArrayList.java:382)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.monteCarloFromState(RamiGamer.java:408)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.monteCarloForMove(RamiGamer.java:279)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.stateMachineSelectMove(RamiGamer.java:159)
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:210)
+	at org.ggp.base.player.request.grammar.PlayRequest.process(PlayRequest.java:49)
+	at org.ggp.base.player.GamePlayer.run(GamePlayer.java:90)
+LOG 1385185525634 [L9]: <ERR> An unhandled exception ocurred during move selection: org.ggp.base.player.gamer.exception.MoveSelectionException: java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:215)
+	at org.ggp.base.player.request.grammar.PlayRequest.process(PlayRequest.java:49)
+	at org.ggp.base.player.GamePlayer.run(GamePlayer.java:90)
+Caused by: java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:604)
+	at java.util.ArrayList.get(ArrayList.java:382)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.monteCarloFromState(RamiGamer.java:408)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.monteCarloForMove(RamiGamer.java:279)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.stateMachineSelectMove(RamiGamer.java:159)
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:210)
+	... 2 more
+LOG 1385185525636 [L0]: [Sent at 1385185525636] nil
+LOG 1385185545198 [L0]: [Sent at 1385185545198] ( mark 2 3 )
+LOG 1385185545208 [L0]: [Received at 1385185545208] ( PLAY kiosk.ticTacToe-1385185421734 (( mark 2 3 ) noop ) )
+LOG 1385185545220 [L0]: [Sent at 1385185545220] noop
+LOG 1385185545222 [L0]: [Received at 1385185545222] ( PLAY kiosk.ticTacToe-1385185421734 (( mark 2 3 ) noop ) )
+LOG 1385185545233 [L9]: <ERR> Goal is poorly defined for oplayer in [( true ( cell 3 1 o ) ), ( true ( cell 1 1 x ) ), ( true ( control oplayer ) ), ( true ( cell 3 3 o ) ), ( true ( cell 2 2 x ) ), ( true ( cell 3 2 o ) ), ( true ( cell 1 3 x ) ), ( true ( cell 1 2 o ) ), ( true ( cell 2 1 x ) ), ( true ( cell 2 3 x ) )]
+	at org.ggp.base.util.statemachine.implementation.prover.ProverStateMachine.getGoal(ProverStateMachine.java:61)
+	at org.ggp.base.util.statemachine.cache.CachedStateMachine.getGoal(CachedStateMachine.java:61)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.monteCarloFromState(RamiGamer.java:400)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.monteCarloForMove(RamiGamer.java:279)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.stateMachineSelectMove(RamiGamer.java:159)
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:210)
+	at org.ggp.base.player.request.grammar.PlayRequest.process(PlayRequest.java:49)
+	at org.ggp.base.player.GamePlayer.run(GamePlayer.java:90)
+LOG 1385185545236 [L9]: <ERR> An unhandled exception ocurred during move selection: org.ggp.base.player.gamer.exception.MoveSelectionException: Goal is poorly defined for oplayer in [( true ( cell 3 1 o ) ), ( true ( cell 1 1 x ) ), ( true ( control oplayer ) ), ( true ( cell 3 3 o ) ), ( true ( cell 2 2 x ) ), ( true ( cell 3 2 o ) ), ( true ( cell 1 3 x ) ), ( true ( cell 1 2 o ) ), ( true ( cell 2 1 x ) ), ( true ( cell 2 3 x ) )]
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:215)
+	at org.ggp.base.player.request.grammar.PlayRequest.process(PlayRequest.java:49)
+	at org.ggp.base.player.GamePlayer.run(GamePlayer.java:90)
+Caused by: Goal is poorly defined for oplayer in [( true ( cell 3 1 o ) ), ( true ( cell 1 1 x ) ), ( true ( control oplayer ) ), ( true ( cell 3 3 o ) ), ( true ( cell 2 2 x ) ), ( true ( cell 3 2 o ) ), ( true ( cell 1 3 x ) ), ( true ( cell 1 2 o ) ), ( true ( cell 2 1 x ) ), ( true ( cell 2 3 x ) )]
+	at org.ggp.base.util.statemachine.implementation.prover.ProverStateMachine.getGoal(ProverStateMachine.java:61)
+	at org.ggp.base.util.statemachine.cache.CachedStateMachine.getGoal(CachedStateMachine.java:61)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.monteCarloFromState(RamiGamer.java:400)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.monteCarloForMove(RamiGamer.java:279)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.stateMachineSelectMove(RamiGamer.java:159)
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:210)
+	... 2 more
+LOG 1385185545237 [L0]: [Sent at 1385185545237] nil
+LOG 1385185545268 [L0]: [Received at 1385185545268] ( STOP kiosk.ticTacToe-1385185421734 (noop ( mark 3 2 ) ) )
+LOG 1385185545276 [L0]: [Sent at 1385185545275] done
+LOG 1385185545288 [L0]: [Received at 1385185545288] ( STOP kiosk.ticTacToe-1385185421734 (noop ( mark 3 2 ) ) )
+LOG 1385185545295 [L0]: [Sent at 1385185545295] done

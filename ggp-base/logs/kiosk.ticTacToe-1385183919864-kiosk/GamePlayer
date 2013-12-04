@@ -1,0 +1,72 @@
+LOG 1385183920387 [L0]: [Received at 1385183920387] ( START kiosk.ticTacToe-1385183919864 oplayer (( role xplayer ) ( role oplayer ) ( init ( cell 1 1 b ) ) ( init ( cell 1 2 b ) ) ( init ( cell 1 3 b ) ) ( init ( cell 2 1 b ) ) ( init ( cell 2 2 b ) ) ( init ( cell 2 3 b ) ) ( init ( cell 3 1 b ) ) ( init ( cell 3 2 b ) ) ( init ( cell 3 3 b ) ) ( init ( control xplayer ) ) ( <= ( next ( cell ?m ?n x ) ) ( does xplayer ( mark ?m ?n ) ) ( true ( cell ?m ?n b ) ) ) ( <= ( next ( cell ?m ?n o ) ) ( does oplayer ( mark ?m ?n ) ) ( true ( cell ?m ?n b ) ) ) ( <= ( next ( cell ?m ?n ?w ) ) ( true ( cell ?m ?n ?w ) ) ( distinct ?w b ) ) ( <= ( next ( cell ?m ?n b ) ) ( does ?w ( mark ?j ?k ) ) ( true ( cell ?m ?n b ) ) ( or ( distinct ?m ?j ) ( distinct ?n ?k ) ) ) ( <= ( next ( control xplayer ) ) ( true ( control oplayer ) ) ) ( <= ( next ( control oplayer ) ) ( true ( control xplayer ) ) ) ( <= ( row ?m ?x ) ( true ( cell ?m 1 ?x ) ) ( true ( cell ?m 2 ?x ) ) ( true ( cell ?m 3 ?x ) ) ) ( <= ( column ?n ?x ) ( true ( cell 1 ?n ?x ) ) ( true ( cell 2 ?n ?x ) ) ( true ( cell 3 ?n ?x ) ) ) ( <= ( diagonal ?x ) ( true ( cell 1 1 ?x ) ) ( true ( cell 2 2 ?x ) ) ( true ( cell 3 3 ?x ) ) ) ( <= ( diagonal ?x ) ( true ( cell 1 3 ?x ) ) ( true ( cell 2 2 ?x ) ) ( true ( cell 3 1 ?x ) ) ) ( <= ( line ?x ) ( row ?m ?x ) ) ( <= ( line ?x ) ( column ?m ?x ) ) ( <= ( line ?x ) ( diagonal ?x ) ) ( <= open ( true ( cell ?m ?n b ) ) ) ( <= ( legal ?w ( mark ?x ?y ) ) ( true ( cell ?x ?y b ) ) ( true ( control ?w ) ) ) ( <= ( legal xplayer noop ) ( true ( control oplayer ) ) ) ( <= ( legal oplayer noop ) ( true ( control xplayer ) ) ) ( <= ( goal xplayer 100 ) ( line x ) ) ( <= ( goal xplayer 50 ) ( not ( line x ) ) ( not ( line o ) ) ( not open ) ) ( <= ( goal xplayer 0 ) ( line o ) ) ( <= ( goal oplayer 100 ) ( line o ) ) ( <= ( goal oplayer 50 ) ( not ( line x ) ) ( not ( line o ) ) ( not open ) ) ( <= ( goal oplayer 0 ) ( line x ) ) ( <= terminal ( line x ) ) ( <= terminal ( line o ) ) ( <= terminal ( not open ) ) ) 30 10)
+LOG 1385183920392 [L0]: [Received at 1385183920392] ( START kiosk.ticTacToe-1385183919864 xplayer (( role xplayer ) ( role oplayer ) ( init ( cell 1 1 b ) ) ( init ( cell 1 2 b ) ) ( init ( cell 1 3 b ) ) ( init ( cell 2 1 b ) ) ( init ( cell 2 2 b ) ) ( init ( cell 2 3 b ) ) ( init ( cell 3 1 b ) ) ( init ( cell 3 2 b ) ) ( init ( cell 3 3 b ) ) ( init ( control xplayer ) ) ( <= ( next ( cell ?m ?n x ) ) ( does xplayer ( mark ?m ?n ) ) ( true ( cell ?m ?n b ) ) ) ( <= ( next ( cell ?m ?n o ) ) ( does oplayer ( mark ?m ?n ) ) ( true ( cell ?m ?n b ) ) ) ( <= ( next ( cell ?m ?n ?w ) ) ( true ( cell ?m ?n ?w ) ) ( distinct ?w b ) ) ( <= ( next ( cell ?m ?n b ) ) ( does ?w ( mark ?j ?k ) ) ( true ( cell ?m ?n b ) ) ( or ( distinct ?m ?j ) ( distinct ?n ?k ) ) ) ( <= ( next ( control xplayer ) ) ( true ( control oplayer ) ) ) ( <= ( next ( control oplayer ) ) ( true ( control xplayer ) ) ) ( <= ( row ?m ?x ) ( true ( cell ?m 1 ?x ) ) ( true ( cell ?m 2 ?x ) ) ( true ( cell ?m 3 ?x ) ) ) ( <= ( column ?n ?x ) ( true ( cell 1 ?n ?x ) ) ( true ( cell 2 ?n ?x ) ) ( true ( cell 3 ?n ?x ) ) ) ( <= ( diagonal ?x ) ( true ( cell 1 1 ?x ) ) ( true ( cell 2 2 ?x ) ) ( true ( cell 3 3 ?x ) ) ) ( <= ( diagonal ?x ) ( true ( cell 1 3 ?x ) ) ( true ( cell 2 2 ?x ) ) ( true ( cell 3 1 ?x ) ) ) ( <= ( line ?x ) ( row ?m ?x ) ) ( <= ( line ?x ) ( column ?m ?x ) ) ( <= ( line ?x ) ( diagonal ?x ) ) ( <= open ( true ( cell ?m ?n b ) ) ) ( <= ( legal ?w ( mark ?x ?y ) ) ( true ( cell ?x ?y b ) ) ( true ( control ?w ) ) ) ( <= ( legal xplayer noop ) ( true ( control oplayer ) ) ) ( <= ( legal oplayer noop ) ( true ( control xplayer ) ) ) ( <= ( goal xplayer 100 ) ( line x ) ) ( <= ( goal xplayer 50 ) ( not ( line x ) ) ( not ( line o ) ) ( not open ) ) ( <= ( goal xplayer 0 ) ( line o ) ) ( <= ( goal oplayer 100 ) ( line o ) ) ( <= ( goal oplayer 50 ) ( not ( line x ) ) ( not ( line o ) ) ( not open ) ) ( <= ( goal oplayer 0 ) ( line x ) ) ( <= terminal ( line x ) ) ( <= terminal ( line o ) ) ( <= terminal ( not open ) ) ) 30 10)
+LOG 1385183920700 [L0]: [Sent at 1385183920700] ready
+LOG 1385183950021 [L0]: [Sent at 1385183950021] ready
+LOG 1385183950116 [L0]: [Received at 1385183950116] ( PLAY kiosk.ticTacToe-1385183919864 NIL )
+LOG 1385183950120 [L0]: [Received at 1385183950120] ( PLAY kiosk.ticTacToe-1385183919864 NIL )
+LOG 1385183956781 [L0]: [Sent at 1385183956781] ( mark 2 2 )
+LOG 1385183959545 [L0]: [Sent at 1385183959545] noop
+LOG 1385183959555 [L0]: [Received at 1385183959555] ( PLAY kiosk.ticTacToe-1385183919864 (( mark 2 2 ) noop ) )
+LOG 1385183959556 [L0]: [Received at 1385183959556] ( PLAY kiosk.ticTacToe-1385183919864 (( mark 2 2 ) noop ) )
+LOG 1385183959587 [L0]: [Sent at 1385183959587] noop
+LOG 1385183968949 [L0]: [Sent at 1385183968949] ( mark 1 1 )
+LOG 1385183968957 [L0]: [Received at 1385183968957] ( PLAY kiosk.ticTacToe-1385183919864 (noop ( mark 1 1 ) ) )
+LOG 1385183968958 [L0]: [Received at 1385183968958] ( PLAY kiosk.ticTacToe-1385183919864 (noop ( mark 1 1 ) ) )
+LOG 1385183974221 [L0]: [Sent at 1385183974221] ( mark 1 3 )
+LOG 1385183978890 [L0]: [Sent at 1385183978890] noop
+LOG 1385183978897 [L0]: [Received at 1385183978897] ( PLAY kiosk.ticTacToe-1385183919864 (( mark 1 3 ) noop ) )
+LOG 1385183978897 [L0]: [Received at 1385183978897] ( PLAY kiosk.ticTacToe-1385183919864 (( mark 1 3 ) noop ) )
+LOG 1385183978912 [L0]: [Sent at 1385183978912] noop
+LOG 1385183978938 [L9]: <ERR> java.util.ConcurrentModificationException
+	at java.util.ArrayList$SubList.checkForComodification(ArrayList.java:1129)
+	at java.util.ArrayList$SubList.size(ArrayList.java:958)
+	at java.util.AbstractList.add(AbstractList.java:108)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.monteCarloFromState(RamiGamer.java:397)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.monteCarloForMove(RamiGamer.java:279)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.stateMachineSelectMove(RamiGamer.java:159)
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:210)
+	at org.ggp.base.player.request.grammar.PlayRequest.process(PlayRequest.java:49)
+	at org.ggp.base.player.GamePlayer.run(GamePlayer.java:90)
+LOG 1385183978941 [L9]: <ERR> An unhandled exception ocurred during move selection: org.ggp.base.player.gamer.exception.MoveSelectionException: java.util.ConcurrentModificationException
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:215)
+	at org.ggp.base.player.request.grammar.PlayRequest.process(PlayRequest.java:49)
+	at org.ggp.base.player.GamePlayer.run(GamePlayer.java:90)
+Caused by: java.util.ConcurrentModificationException
+	at java.util.ArrayList$SubList.checkForComodification(ArrayList.java:1129)
+	at java.util.ArrayList$SubList.size(ArrayList.java:958)
+	at java.util.AbstractList.add(AbstractList.java:108)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.monteCarloFromState(RamiGamer.java:397)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.monteCarloForMove(RamiGamer.java:279)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.stateMachineSelectMove(RamiGamer.java:159)
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:210)
+	... 2 more
+LOG 1385183978954 [L0]: [Sent at 1385183978954] nil
+LOG 1385183978964 [L0]: [Received at 1385183978964] ( PLAY kiosk.ticTacToe-1385183919864 (noop ( mark 1 2 ) ) )
+LOG 1385183978998 [L0]: [Received at 1385183978998] ( PLAY kiosk.ticTacToe-1385183919864 (noop ( mark 1 2 ) ) )
+LOG 1385183979048 [L9]: <ERR> java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:371)
+	at java.util.ArrayList.remove(ArrayList.java:448)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.monteCarloFromState(RamiGamer.java:393)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.monteCarloForMove(RamiGamer.java:279)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.stateMachineSelectMove(RamiGamer.java:159)
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:210)
+	at org.ggp.base.player.request.grammar.PlayRequest.process(PlayRequest.java:49)
+	at org.ggp.base.player.GamePlayer.run(GamePlayer.java:90)
+LOG 1385183979050 [L9]: <ERR> An unhandled exception ocurred during move selection: org.ggp.base.player.gamer.exception.MoveSelectionException: java.lang.ArrayIndexOutOfBoundsException: -1
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:215)
+	at org.ggp.base.player.request.grammar.PlayRequest.process(PlayRequest.java:49)
+	at org.ggp.base.player.GamePlayer.run(GamePlayer.java:90)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:371)
+	at java.util.ArrayList.remove(ArrayList.java:448)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.monteCarloFromState(RamiGamer.java:393)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.monteCarloForMove(RamiGamer.java:279)
+	at org.ggp.base.player.gamer.statemachine.sample.RamiGamer.stateMachineSelectMove(RamiGamer.java:159)
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:210)
+	... 2 more
+LOG 1385183979055 [L0]: [Sent at 1385183979055] nil
+LOG 1385184166828 [L0]: [Sent at 1385184166828] ( mark 3 1 )
+LOG 1385184166856 [L0]: [Received at 1385184166856] ( STOP kiosk.ticTacToe-1385183919864 (( mark 3 1 ) noop ) )
+LOG 1385184166862 [L0]: [Sent at 1385184166862] done
+LOG 1385184166867 [L0]: [Received at 1385184166867] ( STOP kiosk.ticTacToe-1385183919864 (( mark 3 1 ) noop ) )
+LOG 1385184166880 [L0]: [Sent at 1385184166880] done

@@ -1,0 +1,79 @@
+LOG 1385628661522 [L0]: [Received at 1385628661522] ( START kiosk.golden_rectangle-1385628661497 red (( role red ) ( role yellow ) ( init ( cell 1 0 dirt ) ) ( init ( cell 2 0 dirt ) ) ( init ( cell 3 0 dirt ) ) ( init ( cell 4 0 dirt ) ) ( init ( cell 5 0 dirt ) ) ( init ( cell 6 0 dirt ) ) ( init ( cell 7 0 dirt ) ) ( init ( cell 1 1 b ) ) ( init ( cell 1 2 b ) ) ( init ( cell 1 3 b ) ) ( init ( cell 1 4 b ) ) ( init ( cell 1 5 b ) ) ( init ( cell 1 6 b ) ) ( init ( cell 2 1 b ) ) ( init ( cell 2 2 b ) ) ( init ( cell 2 3 b ) ) ( init ( cell 2 4 b ) ) ( init ( cell 2 5 b ) ) ( init ( cell 2 6 b ) ) ( init ( cell 3 1 b ) ) ( init ( cell 3 2 b ) ) ( init ( cell 3 3 b ) ) ( init ( cell 3 4 b ) ) ( init ( cell 3 5 b ) ) ( init ( cell 3 6 b ) ) ( init ( cell 4 1 b ) ) ( init ( cell 4 2 b ) ) ( init ( cell 4 3 b ) ) ( init ( cell 4 4 b ) ) ( init ( cell 4 5 b ) ) ( init ( cell 4 6 b ) ) ( init ( cell 5 1 b ) ) ( init ( cell 5 2 b ) ) ( init ( cell 5 3 b ) ) ( init ( cell 5 4 b ) ) ( init ( cell 5 5 b ) ) ( init ( cell 5 6 b ) ) ( init ( cell 6 1 b ) ) ( init ( cell 6 2 b ) ) ( init ( cell 6 3 b ) ) ( init ( cell 6 4 b ) ) ( init ( cell 6 5 b ) ) ( init ( cell 6 6 b ) ) ( init ( cell 7 1 b ) ) ( init ( cell 7 2 b ) ) ( init ( cell 7 3 b ) ) ( init ( cell 7 4 b ) ) ( init ( cell 7 5 b ) ) ( init ( cell 7 6 b ) ) ( init ( control red ) ) ( <= ( legal ?p ( mark ?x ?y ) ) ( true ( cell ?x ?y dirt ) ) ( true ( control ?p ) ) ) ( <= ( legal red noop ) ( true ( cell ?x ?y dirt ) ) ( true ( control yellow ) ) ) ( <= ( legal yellow noop ) ( true ( cell ?x ?y dirt ) ) ( true ( control red ) ) ) ( <= ( next ( cell ?m ?n y ) ) ( does yellow ( mark ?m ?n ) ) ) ( <= ( next ( cell ?m ?n r ) ) ( does red ( mark ?m ?n ) ) ) ( <= ( next ( cell ?m ?p dirt ) ) ( does ?player ( mark ?m ?n ) ) ( succ ?n ?p ) ( lte ?p 7 ) ) ( <= ( next ( cell ?m ?n ?w ) ) ( true ( cell ?m ?n ?w ) ) ( distinct ?w b ) ( distinct ?w dirt ) ) ( <= ( next ( cell ?m ?n dirt ) ) ( true ( cell ?m ?n dirt ) ) ( does ?player ( mark ?j ?k ) ) ( distinct ?n ?k ) ) ( <= ( next ( cell ?m ?n dirt ) ) ( true ( cell ?m ?n dirt ) ) ( does ?player ( mark ?j ?k ) ) ( distinct ?m ?j ) ) ( <= ( next ( cell ?m ?n b ) ) ( true ( cell ?m ?n b ) ) ( does ?player ( mark ?j ?k ) ) ( distinct ?m ?j ) ) ( <= ( next ( cell ?m ?n b ) ) ( true ( cell ?m ?n b ) ) ( does ?player ( mark ?j ?k ) ) ( succ ?k ?x ) ( distinct ?n ?x ) ) ( <= ( next ( control yellow ) ) ( true ( control red ) ) ) ( <= ( next ( control red ) ) ( true ( control yellow ) ) ) ( <= ( checkDist ?m ?n ) ( lte ?z ?n ) ( succ ?m ?x ) ( succ ?x ?y ) ( succ ?y ?z ) ) ( <= ( checkRect ?ax ?ay ?ax ?by ?cx ?ay ?cx ?by ) ( checkDist ?ax ?cx ) ( checkDist ?ay ?by ) ) ( <= ( rectangle ?player ) ( checkRect ?ax ?ay ?bx ?by ?cx ?cy ?dx ?dy ) ( true ( cell ?ax ?ay ?player ) ) ( true ( cell ?bx ?by ?player ) ) ( true ( cell ?cx ?cy ?player ) ) ( true ( cell ?dx ?dy ?player ) ) ) ( <= open ( true ( cell ?m ?n dirt ) ) ) ( <= terminal ( rectangle y ) ) ( <= terminal ( rectangle r ) ) ( <= terminal ( not open ) ) ( <= ( goal red 100 ) ( rectangle r ) ) ( <= ( goal red 0 ) ( rectangle y ) ) ( <= ( goal red 0 ) ( not open ) ( not ( rectangle r ) ) ( not ( rectangle y ) ) ) ( <= ( goal yellow 100 ) ( rectangle y ) ) ( <= ( goal yellow 0 ) ( rectangle r ) ) ( <= ( goal yellow 100 ) ( not open ) ( not ( rectangle r ) ) ( not ( rectangle y ) ) ) ( <= ( lte 0 ?x ) ( number ?x ) ) ( <= ( lte ?x ?x ) ( number ?x ) ) ( <= ( lte ?x ?z ) ( succ ?y ?z ) ( lte ?x ?y ) ) ( <= ( lte ?x ?y ) ( succ ?x ?y ) ) ( number 0 ) ( number 1 ) ( number 2 ) ( number 3 ) ( number 4 ) ( number 5 ) ( number 6 ) ( number 7 ) ( number 8 ) ( succ 0 1 ) ( succ 1 2 ) ( succ 2 3 ) ( succ 3 4 ) ( succ 4 5 ) ( succ 5 6 ) ( succ 6 7 ) ( succ 7 8 ) ) 15 30)
+LOG 1385628661524 [L0]: [Received at 1385628661524] ( START kiosk.golden_rectangle-1385628661497 yellow (( role red ) ( role yellow ) ( init ( cell 1 0 dirt ) ) ( init ( cell 2 0 dirt ) ) ( init ( cell 3 0 dirt ) ) ( init ( cell 4 0 dirt ) ) ( init ( cell 5 0 dirt ) ) ( init ( cell 6 0 dirt ) ) ( init ( cell 7 0 dirt ) ) ( init ( cell 1 1 b ) ) ( init ( cell 1 2 b ) ) ( init ( cell 1 3 b ) ) ( init ( cell 1 4 b ) ) ( init ( cell 1 5 b ) ) ( init ( cell 1 6 b ) ) ( init ( cell 2 1 b ) ) ( init ( cell 2 2 b ) ) ( init ( cell 2 3 b ) ) ( init ( cell 2 4 b ) ) ( init ( cell 2 5 b ) ) ( init ( cell 2 6 b ) ) ( init ( cell 3 1 b ) ) ( init ( cell 3 2 b ) ) ( init ( cell 3 3 b ) ) ( init ( cell 3 4 b ) ) ( init ( cell 3 5 b ) ) ( init ( cell 3 6 b ) ) ( init ( cell 4 1 b ) ) ( init ( cell 4 2 b ) ) ( init ( cell 4 3 b ) ) ( init ( cell 4 4 b ) ) ( init ( cell 4 5 b ) ) ( init ( cell 4 6 b ) ) ( init ( cell 5 1 b ) ) ( init ( cell 5 2 b ) ) ( init ( cell 5 3 b ) ) ( init ( cell 5 4 b ) ) ( init ( cell 5 5 b ) ) ( init ( cell 5 6 b ) ) ( init ( cell 6 1 b ) ) ( init ( cell 6 2 b ) ) ( init ( cell 6 3 b ) ) ( init ( cell 6 4 b ) ) ( init ( cell 6 5 b ) ) ( init ( cell 6 6 b ) ) ( init ( cell 7 1 b ) ) ( init ( cell 7 2 b ) ) ( init ( cell 7 3 b ) ) ( init ( cell 7 4 b ) ) ( init ( cell 7 5 b ) ) ( init ( cell 7 6 b ) ) ( init ( control red ) ) ( <= ( legal ?p ( mark ?x ?y ) ) ( true ( cell ?x ?y dirt ) ) ( true ( control ?p ) ) ) ( <= ( legal red noop ) ( true ( cell ?x ?y dirt ) ) ( true ( control yellow ) ) ) ( <= ( legal yellow noop ) ( true ( cell ?x ?y dirt ) ) ( true ( control red ) ) ) ( <= ( next ( cell ?m ?n y ) ) ( does yellow ( mark ?m ?n ) ) ) ( <= ( next ( cell ?m ?n r ) ) ( does red ( mark ?m ?n ) ) ) ( <= ( next ( cell ?m ?p dirt ) ) ( does ?player ( mark ?m ?n ) ) ( succ ?n ?p ) ( lte ?p 7 ) ) ( <= ( next ( cell ?m ?n ?w ) ) ( true ( cell ?m ?n ?w ) ) ( distinct ?w b ) ( distinct ?w dirt ) ) ( <= ( next ( cell ?m ?n dirt ) ) ( true ( cell ?m ?n dirt ) ) ( does ?player ( mark ?j ?k ) ) ( distinct ?n ?k ) ) ( <= ( next ( cell ?m ?n dirt ) ) ( true ( cell ?m ?n dirt ) ) ( does ?player ( mark ?j ?k ) ) ( distinct ?m ?j ) ) ( <= ( next ( cell ?m ?n b ) ) ( true ( cell ?m ?n b ) ) ( does ?player ( mark ?j ?k ) ) ( distinct ?m ?j ) ) ( <= ( next ( cell ?m ?n b ) ) ( true ( cell ?m ?n b ) ) ( does ?player ( mark ?j ?k ) ) ( succ ?k ?x ) ( distinct ?n ?x ) ) ( <= ( next ( control yellow ) ) ( true ( control red ) ) ) ( <= ( next ( control red ) ) ( true ( control yellow ) ) ) ( <= ( checkDist ?m ?n ) ( lte ?z ?n ) ( succ ?m ?x ) ( succ ?x ?y ) ( succ ?y ?z ) ) ( <= ( checkRect ?ax ?ay ?ax ?by ?cx ?ay ?cx ?by ) ( checkDist ?ax ?cx ) ( checkDist ?ay ?by ) ) ( <= ( rectangle ?player ) ( checkRect ?ax ?ay ?bx ?by ?cx ?cy ?dx ?dy ) ( true ( cell ?ax ?ay ?player ) ) ( true ( cell ?bx ?by ?player ) ) ( true ( cell ?cx ?cy ?player ) ) ( true ( cell ?dx ?dy ?player ) ) ) ( <= open ( true ( cell ?m ?n dirt ) ) ) ( <= terminal ( rectangle y ) ) ( <= terminal ( rectangle r ) ) ( <= terminal ( not open ) ) ( <= ( goal red 100 ) ( rectangle r ) ) ( <= ( goal red 0 ) ( rectangle y ) ) ( <= ( goal red 0 ) ( not open ) ( not ( rectangle r ) ) ( not ( rectangle y ) ) ) ( <= ( goal yellow 100 ) ( rectangle y ) ) ( <= ( goal yellow 0 ) ( rectangle r ) ) ( <= ( goal yellow 100 ) ( not open ) ( not ( rectangle r ) ) ( not ( rectangle y ) ) ) ( <= ( lte 0 ?x ) ( number ?x ) ) ( <= ( lte ?x ?x ) ( number ?x ) ) ( <= ( lte ?x ?z ) ( succ ?y ?z ) ( lte ?x ?y ) ) ( <= ( lte ?x ?y ) ( succ ?x ?y ) ) ( number 0 ) ( number 1 ) ( number 2 ) ( number 3 ) ( number 4 ) ( number 5 ) ( number 6 ) ( number 7 ) ( number 8 ) ( succ 0 1 ) ( succ 1 2 ) ( succ 2 3 ) ( succ 3 4 ) ( succ 4 5 ) ( succ 5 6 ) ( succ 6 7 ) ( succ 7 8 ) ) 15 30)
+LOG 1385628661591 [L0]: [Sent at 1385628661591] ready
+LOG 1385628661618 [L0]: [Sent at 1385628661618] ready
+LOG 1385628661680 [L0]: [Received at 1385628661680] ( PLAY kiosk.golden_rectangle-1385628661497 NIL )
+LOG 1385628661682 [L0]: [Sent at 1385628661682] noop
+LOG 1385628661704 [L0]: [Received at 1385628661704] ( PLAY kiosk.golden_rectangle-1385628661497 NIL )
+LOG 1385628667116 [L0]: [Sent at 1385628667116] ( mark 2 0 )
+LOG 1385628667167 [L0]: [Received at 1385628667167] ( PLAY kiosk.golden_rectangle-1385628661497 (( mark 2 0 ) noop ) )
+LOG 1385628667169 [L0]: [Received at 1385628667169] ( PLAY kiosk.golden_rectangle-1385628661497 (( mark 2 0 ) noop ) )
+LOG 1385628667194 [L0]: [Sent at 1385628667194] noop
+LOG 1385628695998 [L0]: [Sent at 1385628695998] ( mark 6 0 )
+LOG 1385628696026 [L0]: [Received at 1385628696026] ( PLAY kiosk.golden_rectangle-1385628661497 (noop ( mark 6 0 ) ) )
+LOG 1385628696027 [L0]: [Received at 1385628696027] ( PLAY kiosk.golden_rectangle-1385628661497 (noop ( mark 6 0 ) ) )
+LOG 1385628696035 [L0]: [Sent at 1385628696035] noop
+LOG 1385628703971 [L0]: [Sent at 1385628703971] ( mark 2 1 )
+LOG 1385628704010 [L0]: [Received at 1385628704010] ( PLAY kiosk.golden_rectangle-1385628661497 (( mark 2 1 ) noop ) )
+LOG 1385628704019 [L0]: [Sent at 1385628704019] noop
+LOG 1385628704021 [L0]: [Received at 1385628704021] ( PLAY kiosk.golden_rectangle-1385628661497 (( mark 2 1 ) noop ) )
+LOG 1385628732837 [L0]: [Sent at 1385628732837] ( mark 1 0 )
+LOG 1385628732874 [L0]: [Received at 1385628732874] ( PLAY kiosk.golden_rectangle-1385628661497 (noop ( mark 1 0 ) ) )
+LOG 1385628732875 [L0]: [Received at 1385628732875] ( PLAY kiosk.golden_rectangle-1385628661497 (noop ( mark 1 0 ) ) )
+LOG 1385628732877 [L0]: [Sent at 1385628732877] noop
+LOG 1385628743100 [L0]: [Sent at 1385628743100] ( mark 2 2 )
+LOG 1385628743142 [L0]: [Received at 1385628743142] ( PLAY kiosk.golden_rectangle-1385628661497 (( mark 2 2 ) noop ) )
+LOG 1385628743149 [L0]: [Received at 1385628743149] ( PLAY kiosk.golden_rectangle-1385628661497 (( mark 2 2 ) noop ) )
+LOG 1385628743152 [L0]: [Sent at 1385628743152] noop
+LOG 1385628771966 [L0]: [Sent at 1385628771966] ( mark 5 0 )
+LOG 1385628772002 [L0]: [Received at 1385628772002] ( PLAY kiosk.golden_rectangle-1385628661497 (noop ( mark 5 0 ) ) )
+LOG 1385628772013 [L0]: [Received at 1385628772013] ( PLAY kiosk.golden_rectangle-1385628661497 (noop ( mark 5 0 ) ) )
+LOG 1385628772017 [L0]: [Sent at 1385628772017] noop
+LOG 1385629216846 [L0]: [Sent at 1385629216846] ( mark 2 3 )
+LOG 1385629216889 [L0]: [Received at 1385629216889] ( PLAY kiosk.golden_rectangle-1385628661497 (( mark 2 3 ) noop ) )
+LOG 1385629216894 [L0]: [Received at 1385629216894] ( PLAY kiosk.golden_rectangle-1385628661497 (( mark 2 3 ) noop ) )
+LOG 1385629216913 [L0]: [Sent at 1385629216913] noop
+LOG 1385629245728 [L0]: [Sent at 1385629245728] ( mark 1 1 )
+LOG 1385629245773 [L0]: [Received at 1385629245773] ( PLAY kiosk.golden_rectangle-1385628661497 (noop ( mark 1 1 ) ) )
+LOG 1385629245780 [L0]: [Received at 1385629245780] ( PLAY kiosk.golden_rectangle-1385628661497 (noop ( mark 1 1 ) ) )
+LOG 1385629245783 [L0]: [Sent at 1385629245783] noop
+LOG 1385629256992 [L0]: [Sent at 1385629256992] ( mark 2 4 )
+LOG 1385629257040 [L0]: [Received at 1385629257040] ( PLAY kiosk.golden_rectangle-1385628661497 (( mark 2 4 ) noop ) )
+LOG 1385629257041 [L0]: [Received at 1385629257041] ( PLAY kiosk.golden_rectangle-1385628661497 (( mark 2 4 ) noop ) )
+LOG 1385629257051 [L0]: [Sent at 1385629257051] noop
+LOG 1385629285866 [L0]: [Sent at 1385629285866] ( mark 6 1 )
+LOG 1385629285903 [L0]: [Received at 1385629285903] ( PLAY kiosk.golden_rectangle-1385628661497 (noop ( mark 6 1 ) ) )
+LOG 1385629285904 [L0]: [Received at 1385629285904] ( PLAY kiosk.golden_rectangle-1385628661497 (noop ( mark 6 1 ) ) )
+LOG 1385629285906 [L0]: [Sent at 1385629285906] noop
+LOG 1385629306640 [L0]: [Sent at 1385629306640] ( mark 3 0 )
+LOG 1385629306689 [L0]: [Received at 1385629306689] ( PLAY kiosk.golden_rectangle-1385628661497 (( mark 3 0 ) noop ) )
+LOG 1385629306689 [L0]: [Received at 1385629306689] ( PLAY kiosk.golden_rectangle-1385628661497 (( mark 3 0 ) noop ) )
+LOG 1385629306712 [L0]: [Sent at 1385629306712] noop
+LOG 1385629335538 [L0]: [Sent at 1385629335538] ( mark 3 1 )
+LOG 1385629335578 [L0]: [Received at 1385629335578] ( PLAY kiosk.golden_rectangle-1385628661497 (noop ( mark 3 1 ) ) )
+LOG 1385629335578 [L0]: [Received at 1385629335578] ( PLAY kiosk.golden_rectangle-1385628661497 (noop ( mark 3 1 ) ) )
+LOG 1385629335580 [L0]: [Sent at 1385629335580] noop
+LOG 1385629348142 [L0]: [Sent at 1385629348142] ( mark 3 2 )
+LOG 1385629348185 [L0]: [Received at 1385629348185] ( PLAY kiosk.golden_rectangle-1385628661497 (( mark 3 2 ) noop ) )
+LOG 1385629348193 [L0]: [Sent at 1385629348193] noop
+LOG 1385629348200 [L0]: [Received at 1385629348200] ( PLAY kiosk.golden_rectangle-1385628661497 (( mark 3 2 ) noop ) )
+LOG 1385629377082 [L0]: [Sent at 1385629377082] ( mark 6 2 )
+LOG 1385629377112 [L0]: [Received at 1385629377112] ( PLAY kiosk.golden_rectangle-1385628661497 (noop ( mark 6 2 ) ) )
+LOG 1385629377122 [L0]: [Received at 1385629377122] ( PLAY kiosk.golden_rectangle-1385628661497 (noop ( mark 6 2 ) ) )
+LOG 1385629377125 [L0]: [Sent at 1385629377125] noop
+LOG 1385629386318 [L0]: [Sent at 1385629386318] ( mark 3 3 )
+LOG 1385629386360 [L0]: [Received at 1385629386360] ( PLAY kiosk.golden_rectangle-1385628661497 (( mark 3 3 ) noop ) )
+LOG 1385629386364 [L0]: [Received at 1385629386364] ( PLAY kiosk.golden_rectangle-1385628661497 (( mark 3 3 ) noop ) )
+LOG 1385629386383 [L0]: [Sent at 1385629386383] noop
+LOG 1385629415206 [L0]: [Sent at 1385629415206] ( mark 2 5 )
+LOG 1385629415246 [L0]: [Received at 1385629415246] ( PLAY kiosk.golden_rectangle-1385628661497 (noop ( mark 2 5 ) ) )
+LOG 1385629415247 [L0]: [Received at 1385629415247] ( PLAY kiosk.golden_rectangle-1385628661497 (noop ( mark 2 5 ) ) )
+LOG 1385629415248 [L0]: [Sent at 1385629415248] noop
+LOG 1385629425561 [L0]: [Sent at 1385629425561] ( mark 3 4 )
+LOG 1385629425620 [L0]: [Received at 1385629425620] ( PLAY kiosk.golden_rectangle-1385628661497 (( mark 3 4 ) noop ) )
+LOG 1385629425620 [L0]: [Received at 1385629425620] ( PLAY kiosk.golden_rectangle-1385628661497 (( mark 3 4 ) noop ) )
+LOG 1385629425647 [L0]: [Sent at 1385629425647] noop
+LOG 1385629454474 [L0]: [Sent at 1385629454474] ( mark 1 2 )
+LOG 1385629454514 [L0]: [Received at 1385629454514] ( PLAY kiosk.golden_rectangle-1385628661497 (noop ( mark 1 2 ) ) )
+LOG 1385629454516 [L0]: [Sent at 1385629454516] noop
+LOG 1385629454520 [L0]: [Received at 1385629454520] ( PLAY kiosk.golden_rectangle-1385628661497 (noop ( mark 1 2 ) ) )
